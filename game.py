@@ -8,7 +8,7 @@ def main():
     print("༼ ᓄºل͟º ༽ᓄ   ᕦ(ò_óˇ)ᕤ")
 
     # Create a hero
-    hero = Hero("Student")
+    hero = Hero("Jeremy")
 
     
 
