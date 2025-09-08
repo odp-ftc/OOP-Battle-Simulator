@@ -51,11 +51,11 @@ def main():
 
     if hero.is_alive():
         print("BOSS TIME")
-        boss = BananaBoss.BananaMan("BananaMan")
-        while hero.is_alive() and boss.is_alive():
+        banana_boss = BananaBoss.BananaMan("BananaMan")
+        while hero.is_alive() and banana_boss.is_alive():
             damage = hero.strike()
-            boss.take_damage(damage)
-            damage = boss.attack()
+            banana_boss.take_damage(damage)
+            damage = banana_boss.attack()
             hero.receive_damage(damage)
     
     if hero.is_alive():
@@ -64,17 +64,18 @@ def main():
 
     else:
         print(f"\nThe hero has been defeated. Game Over. (｡•́︿•̀｡)")
-
-
-    # Final tally of goblins defeated
-    print(f"\nTotal goblins defeated: {defeated_goblins} / {len(goblins)}")
+ 
     print("")
-    print("")
+    print("") #Tally of what the hero has done.
     print("---------------BATTLE STATS---------------")
+    print(f"\nTotal goblins defeated: {defeated_goblins} / {len(goblins)}")
     print(f"\nTotal Damage Dealt by Hero: {total_damage}")
     print(f"\nTotal Rounds: {rounds_survived}")
+
     if boss_beat:
         print("Boss Defeated")
+    else:
+        print("Lost to boss")
 
 if __name__ == "__main__":
     main()
