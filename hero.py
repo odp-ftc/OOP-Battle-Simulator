@@ -20,12 +20,13 @@ class Hero:
         self.health = 267
         self.attack_power = random.randint(10, 41)
         self.defense = random.randint(15, 20)
-        self.banana = random.randint(1,5) < 1 #Hero hits goblin with infinity banana, leading to their DOOOM
+        self.banana = random.randint(1,15) #Hero hits goblin with infinity banana from a banana boss, leading to their DOOOM
     
 
     def strike(self):
-        if self.banana:
+        if self.banana == 1:
             return 9999999999
+            print("Hero Used Banana!")
         else:
             return random.randint(5, self.attack_power)
     
